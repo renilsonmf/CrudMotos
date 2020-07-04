@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Racer | Loja de motos</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center font-weight-light">Moto Racer | Loja de motos</h1>
+        <h3 class="text-center font-weight-light">Cadastro de Clientes</h3>
+        <hr/>
+        <div th:if="${listarClientes.size() > 0}">
+            <div class="m-1" th:each="clientes : ${listarClientes}">
+                <div class="row col-12">
+                    <p style="font-size: 2.5rem;" class="font-weight-light">Clientes Cadastrados</p>
+                </div>
+                <div class="row col-12 justify-content-start">
+                    <a style="font-size: 1.5rem;" th:href="@{/mostrarClientes/{id}(id=${clientes.id})}" th:text="${clientes.nome}"></a>
+                </div>
+                <hr class="my-3">
+                <div class="row col-12 justify-content-center">
+                    <a style="width: 4.5rem; height: 2.0rem;" class="btn btn-success btn-sm m-2 text-center" th:href="@{/editarClientes/{id}(id=${clientes.id})}">Editar</a>
+                    <a style="width: 4.5rem; height: 2.0rem;" class="btn btn-danger btn-sm m-2" th:href="@{/deletarClientes/{id}(id=${clientes.id})}">Deletar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+</html> -->

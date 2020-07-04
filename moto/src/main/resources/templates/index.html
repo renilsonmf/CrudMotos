@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Racer | Loja de motos</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Moto Racer | Loja de motos</h1>
+
+        <div th:if="${lista.size() > 0}">
+            <div class="row m-1" th:each="moto : ${lista}">
+                <div class="col-6">
+                    <a th:href="@{/mostrar/{id}(id=${moto.id})}" th:text="${moto.nome}"></a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-success btn-sm " th:href="@{/editar/{id}(id=${moto.id})}">Editar</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-danger btn-sm" th:href="@{/deletar/{id}(id=${moto.id})}">Deletar</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="/cadastrar">Cadastrar moto</a>
+    </div>
+
+
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+</html>

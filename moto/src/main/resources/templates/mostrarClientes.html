@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="text-center">Lista de Clientes/<h1>
+        <hr/>
+        <p style="font-size: 2.0rem;" class="text-sm-left font-weight-light">Nome</p>
+        <h4 class="text-start ml-5" th:text="${clientes.nome}"></h4>
+        <hr class="my-1">
+        <p style="font-size: 2.0rem;" class="text-sm-left font-weight-light">Endereço</p>
+        <h4 class="text-start ml-5" th:text="${clientes.endereco}"></h4>
+        <hr class="my-1">
+        <p style="font-size: 2.0rem;" class="text-sm-left font-weight-light">Cpf</p>
+        <h4 class="text-start ml-5" th:text="${clientes.cpf}"></h4>
+        <hr class="my-1">
+        <p style="font-size: 2.0rem;" class="text-sm-left font-weight-light">Idade</p>
+        <h4 class="text-start ml-5" th:text="${clientes.idade}"></h4>
+        <hr class="my-1">
+        <p style="font-size: 2.0rem;" class="text-sm-left font-weight-light">Telefone</p>
+        <h4 class="text-start ml-5" th:text="${clientes.telefone}"></h4>
+        <hr class="my-1">
+        <div class="mt-3" style="font-size: x-large;">
+        <a class="mb-5" href="/">voltar</a>
+        </div>
+        <hr class="my-2">
+    </div>
+
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Racer | Loja de motos</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Motos</h1>
+        <form method="POST" action="/cadastrar">
+            <div class="form-group">
+                <label class="font-weight-bold" for="nome">Nome</label>
+                <input class="form-control shadow-sm p-3 mb-5 bg-white rounded" type="text" name="nome" id="nome" th:value="${moto.nome}">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="descricao">Modelo/Ano</label>
+                <input class="form-control shadow-sm p-3 mb-5 bg-white rounded" type="number" name="modelo" id="modelo" th:value="${moto.modelo}">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="fabricante">Fabricante</label>
+                <input class="form-control shadow-sm p-3 mb-5 bg-white rounded" type="text" name="fabricante" id="fabricante" th:value="${moto.fabricante}">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="cilindrada">Cilindrada</label>
+                <input class="form-control shadow-sm p-3 mb-5 bg-white rounded" type="number" name="cilindrada" id="cilindrada" th:value="${moto.cilindrada}">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="preco">Preço</label>
+                <input class="form-control shadow-sm p-3 mb-5 bg-white rounded" type="number" name="preco" id="preco" th:value="${moto.preco}">
+            </div>
+
+            <input type="hidden" name="id" th:value="${moto.id}">
+    
+            <input type="submit" class="btn btn-primary" id="botao" value="Enviar">
+        </form>
+
+        <div class="mt-2">
+            <a href="/">voltar</a>
+        </div>
+        <hr class="my-3">
+    </div>
+    
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+</html>
